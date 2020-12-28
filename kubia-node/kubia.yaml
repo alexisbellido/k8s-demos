@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubia
+spec:
+  containers:
+  - name: kubia
+    image: luksa/kubia:1.0
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 8080
+# 117 action / chapter 6
