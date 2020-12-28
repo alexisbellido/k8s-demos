@@ -4,8 +4,12 @@ metadata:
   name: kuard
 spec:
   containers:
-    - image: gcr.io/kuar-demo/kuard-amd64:1
+    # - image: gcr.io/kuar-demo/kuard-amd64:1
+    - image: alexisbellido/kuard-amd64:1
       name: kuard
+      # one potential solution to using local registry with MicroK8s
+      # but doesn't work all the times, better try with built-in registry
+      imagePullPolicy: Never
       resources:
         requests:
           cpu: "500m"
